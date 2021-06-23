@@ -14,10 +14,12 @@ function login() {
 
   fetch('/login', {
     method: 'POST',
-    header: {
+    headers: {
       'Content-Type': 'application/json',
     },
     // req를 json.stringify메서드를 사용해서 req를 문자열로 변환
     body: JSON.stringify(req),
-  });
+  })
+    .then((res) => res.json())
+    .then(console.log);
 }
