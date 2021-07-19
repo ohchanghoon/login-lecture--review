@@ -3,6 +3,7 @@
 // 모듈
 const express = require('express');
 const app = express();
+const dotenv = require('dotenv').config();
 
 // 라우팅
 const home = require('./src/routes/home');
