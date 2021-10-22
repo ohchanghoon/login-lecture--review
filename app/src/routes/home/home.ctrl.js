@@ -42,7 +42,6 @@ const process = {
       method: 'POST',
       path: '/register',
       status: response.err ? 409 : 201,
-      w,
     };
     log(response, url);
 
