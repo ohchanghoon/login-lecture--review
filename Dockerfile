@@ -11,7 +11,8 @@ RUN mkdir -p /app
 # /app 디렉토리를 WORKDIR로 설정
 WORKDIR /app
 
-ADD . /app
+COPY ./app/package*.json ./app/
+# ADD . /app
 
 RUN npm install
 
@@ -21,7 +22,6 @@ EXPOSE 5500
 
 CMD ["npm", "start"]
 # 이미지에 node.js와 npm은 설치되어 있으므로 npm바이너리로 앱 의존성만 설치
-# COPY ./app/package*.json ./app/
 
 # WORKDIR /app
 
